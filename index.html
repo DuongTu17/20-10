@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gửi Nguyễn Ngọc Minh - Món Quà 20/10 Đặc Biệt</title>
+    <title>Gửi Nguyễn Ngọc Minh - Chúc Mừng Ngày 20/10</title>
     
     <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,6 @@
             --bg-start: #fff5f7;
             --bg-end: #ffe3e8;
             --text-color: #4a3e43;
-            --gold: #d4af37;
         }
 
         * {
@@ -39,7 +38,7 @@
             position: relative;
         }
 
-        /* Background Particle Canvas */
+        /* Particle Canvas */
         #particleCanvas {
             position: fixed;
             top: 0;
@@ -50,11 +49,11 @@
             z-index: 1;
         }
 
-        /* Container Layout */
+        /* Layout Container */
         .app-container {
             position: relative;
             z-index: 2;
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 20px;
             min-height: 100vh;
@@ -64,16 +63,15 @@
             align-items: center;
         }
 
-        /* Header Section */
         header {
             text-align: center;
             margin-bottom: 25px;
-            animation: fadeInDown 1.2s ease-out;
+            animation: fadeInDown 1s ease-out;
         }
 
         .badge-date {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             color: var(--primary-dark);
             padding: 6px 18px;
             border-radius: 50px;
@@ -88,26 +86,24 @@
 
         h1.main-title {
             font-family: 'Dancing Script', cursive;
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: var(--primary-dark);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
             line-height: 1.2;
             margin-bottom: 8px;
         }
 
         .sub-title {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #7a616c;
             font-weight: 500;
         }
 
-        /* Envelope & Card Flip Area */
+        /* Envelope Area */
         .envelope-wrapper {
             position: relative;
             width: 100%;
-            max-width: 520px;
+            max-width: 480px;
             margin: 20px 0;
-            perspective: 1000px;
             cursor: pointer;
         }
 
@@ -119,18 +115,18 @@
             padding: 35px 25px;
             text-align: center;
             position: relative;
-            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+            transition: transform 0.4s ease, box-shadow 0.3s;
             border: 2px solid #fff0f3;
         }
 
         .envelope:hover {
-            transform: translateY(-8px) scale(1.02);
+            transform: translateY(-6px);
             box-shadow: 0 20px 40px rgba(216, 27, 96, 0.22);
         }
 
         .envelope-icon {
-            width: 80px;
-            height: 80px;
+            width: 75px;
+            height: 75px;
             background: linear-gradient(135deg, #ff8eaf, #ff6b8b);
             border-radius: 50%;
             display: flex;
@@ -138,19 +134,19 @@
             justify-content: center;
             margin: 0 auto 20px;
             color: white;
-            font-size: 2.2rem;
-            box-shadow: 0 8px 20px rgba(255, 107, 139, 0.4);
+            font-size: 2rem;
+            box-shadow: 0 8px 20px rgba(255, 107, 139, 0.35);
             animation: pulseHeart 1.8s infinite;
         }
 
         @keyframes pulseHeart {
             0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.08); }
             100% { transform: scale(1); }
         }
 
         .envelope-to {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #888;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -159,7 +155,7 @@
 
         .envelope-name {
             font-family: 'Great Vibes', cursive;
-            font-size: 2.8rem;
+            font-size: 2.7rem;
             color: var(--primary-dark);
             margin-bottom: 15px;
         }
@@ -176,158 +172,151 @@
             font-weight: 600;
         }
 
-        /* Card Content Area (Shown when opened) */
+        /* Modal Card */
         .card-modal {
             display: none;
             width: 100%;
-            max-width: 680px;
-            background: rgba(255, 255, 255, 0.95);
+            max-width: 650px;
+            background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(10px);
-            border-radius: 24px;
-            padding: 40px 30px;
-            box-shadow: 0 20px 50px rgba(216, 27, 96, 0.2);
+            border-radius: 20px;
+            padding: 40px 32px;
+            box-shadow: 0 20px 50px rgba(216, 27, 96, 0.18);
             border: 2px solid #ffffff;
-            animation: zoomIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-            position: relative;
+            animation: zoomIn 0.5s ease forwards;
         }
 
         .letter-header {
             text-align: center;
             border-bottom: 2px dashed #ffd1dc;
-            padding-bottom: 20px;
-            margin-bottom: 25px;
+            padding-bottom: 18px;
+            margin-bottom: 22px;
         }
 
         .letter-header h2 {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             color: var(--primary-dark);
         }
 
         .letter-body {
             font-size: 1.05rem;
             line-height: 1.8;
-            color: #4a3e43;
+            color: #3a2e33;
             text-align: justify;
             margin-bottom: 25px;
         }
 
         .letter-body p {
-            margin-bottom: 15px;
-            text-indent: 20px;
+            margin-bottom: 14px;
+            text-indent: 24px;
         }
 
         .letter-footer {
             text-align: right;
             font-family: 'Dancing Script', cursive;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             color: var(--primary-dark);
             font-weight: bold;
             margin-top: 20px;
         }
 
-        /* Interactive Minigame Section */
+        /* Mini Game Section */
         .interactive-section {
-            margin-top: 30px;
+            margin-top: 25px;
             border-top: 2px dashed #ffd1dc;
-            padding-top: 25px;
+            padding-top: 20px;
             text-align: center;
         }
 
         .game-title {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 700;
             color: var(--primary-dark);
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         .btn-draw {
             background: linear-gradient(135deg, #ff6b8b, #d81b60);
             color: white;
             border: none;
-            padding: 12px 28px;
-            font-size: 1rem;
+            padding: 12px 26px;
+            font-size: 0.98rem;
             font-weight: 700;
             border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 6px 18px rgba(216, 27, 96, 0.3);
+            box-shadow: 0 6px 18px rgba(216, 27, 96, 0.28);
             transition: all 0.3s;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             font-family: 'Quicksand', sans-serif;
         }
 
         .btn-draw:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 22px rgba(216, 27, 96, 0.4);
-            background: linear-gradient(135deg, #ff8eaf, #d81b60);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(216, 27, 96, 0.38);
         }
 
         .wish-box {
             display: none;
-            margin-top: 20px;
+            margin-top: 18px;
             background: #fff5f7;
             border: 2px solid #ffb6c1;
-            padding: 20px;
-            border-radius: 16px;
+            padding: 16px 20px;
+            border-radius: 14px;
             color: #d81b60;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             line-height: 1.6;
-            animation: fadeIn 0.5s ease;
-            position: relative;
+            animation: fadeIn 0.4s ease;
         }
 
-        /* Audio Controls */
+        /* Audio Control Button */
         .audio-btn {
             position: fixed;
             bottom: 25px;
             right: 25px;
-            width: 50px;
-            height: 50px;
-            background: white;
+            width: 52px;
+            height: 52px;
+            background: #ffffff;
             color: var(--primary-dark);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            font-size: 1.25rem;
+            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.15);
             cursor: pointer;
             z-index: 10;
             border: 2px solid #ffe3e8;
             transition: all 0.3s;
         }
 
-        .audio-btn:hover {
-            transform: scale(1.1);
-        }
-
         .audio-btn.playing {
-            animation: spin 4s linear infinite;
+            animation: spin 5s linear infinite;
+            background: #ff6b8b;
+            color: white;
         }
 
         @keyframes spin {
             100% { transform: rotate(360deg); }
         }
 
-        /* Footer */
         footer {
             margin-top: 30px;
             text-align: center;
             font-size: 0.85rem;
-            color: #999;
+            color: #888;
         }
 
-        /* Keyframes */
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
+            from { opacity: 0; transform: translateY(-25px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.8); }
+            from { opacity: 0; transform: scale(0.9); }
             to { opacity: 1; transform: scale(1); }
         }
 
@@ -336,87 +325,88 @@
             to { opacity: 1; }
         }
 
-        /* Responsive */
         @media (max-width: 600px) {
-            h1.main-title { font-size: 2.2rem; }
+            h1.main-title { font-size: 2.1rem; }
             .envelope-name { font-size: 2.3rem; }
             .card-modal { padding: 25px 18px; }
-            .letter-header h2 { font-size: 2rem; }
+            .letter-header h2 { font-size: 1.9rem; }
             .letter-body { font-size: 0.98rem; text-align: left; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Canvas Hiệu ứng Cánh hoa & Trái tim rơi -->
+    <!-- Particle Canvas -->
     <canvas id="particleCanvas"></canvas>
+
+    <!-- Audio Element (Nhạc Việt không lời / Acoustic dịu nhẹ) -->
+    <audio id="bgMusic" loop preload="auto">
+        <!-- Đã nhúng link stream bài hát acoustic nhẹ nhàng thích hợp cho học tập / chúc mừng -->
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3" type="audio/mpeg">
+    </audio>
 
     <div class="app-container">
         
-        <!-- Header -->
         <header>
-            <div class="badge-date"><i class="fa-solid fa-calendar-heart"></i> 20 THÁNG 10, 2026</div>
+            <div class="badge-date"><i class="fa-solid fa-calendar-heart"></i> 20 THÁNG 10</div>
             <h1 class="main-title">Chúc Mừng Ngày Phụ Nữ Việt Nam</h1>
-            <p class="sub-title">Một món quà nhỏ gửi tặng người học sinh vô cùng đặc biệt</p>
+            <p class="sub-title">Gửi tới học sinh Nguyễn Ngọc Minh</p>
         </header>
 
-        <!-- Phong Thư Ban Đầu -->
+        <!-- Envelope -->
         <div class="envelope-wrapper" id="envelopeWrapper" onclick="openCard()">
             <div class="envelope">
                 <div class="envelope-icon">
                     <i class="fa-solid fa-envelope-open-text"></i>
                 </div>
-                <div class="envelope-to">Thư gửi tới học sinh:</div>
+                <div class="envelope-to">Thư chúc mừng gửi tới:</div>
                 <div class="envelope-name">Nguyễn Ngọc Minh</div>
                 <div class="click-hint">
-                    <i class="fa-solid fa-hand-pointer"></i> Bấm vào đây để mở thư nhé!
+                    <i class="fa-solid fa-hand-pointer"></i> Nhấp vào đây để mở thư nhé!
                 </div>
             </div>
         </div>
 
-        <!-- Bức Thư Chi Tiết (Nội dung sau khi mở) -->
+        <!-- Card Content (Gia sư gửi học sinh) -->
         <div class="card-modal" id="cardModal">
             <div class="letter-header">
-                <h2>Gửi Nguyễn Ngọc Minh!</h2>
+                <h2>Gửi học sinh Nguyễn Ngọc Minh,</h2>
             </div>
 
             <div class="letter-body">
-                <p>Nhân ngày Phụ nữ Việt Nam 20/10, tớ/thầy/cô muốn dành riêng một góc nhỏ này để gửi tới Ngọc Minh những lời chúc chân thành và ấm áp nhất.</p>
-                <p>Chúc Ngọc Minh luôn giữ vững nụ cười rạng rỡ, sự thông minh, chăm chỉ cùng tinh thần tự tin vốn có. Mong rằng trên chặng đường học tập sắp tới, em luôn tìm thấy niềm vui trong từng bài học, gặt hái được thật nhiều điểm số cao và từng bước chinh phục thành công những ước mơ của riêng mình.</p>
-                <p>Hãy luôn nhớ rằng em là một cô gái tuyệt vời, đặc biệt và tỏa sáng theo cách rất riêng. Chúc Ngọc Minh có một ngày 20/10 thật trọn vẹn, tràn ngập niềm vui và nhận được thật nhiều tình yêu thương nhé!</p>
+                <p>Nhân ngày Phụ nữ Việt Nam 20/10, anh/chị/thầy gửi lời chúc mừng chân thành nhất đến em cùng gia đình. Chúc Minh luôn có nhiều sức khỏe, giữ vững tinh thần vui tươi, sự tự tin và nét rạng rỡ trong cuộc sống.</p>
+                <p>Trong suốt quá trình đồng hành và học tập cùng nhau vừa qua, anh/chị nhận thấy em là một học sinh chăm chỉ, có tư duy tốt và luôn có trách nhiệm cao với bài vở. Mong rằng trong thời gian tới, em sẽ tiếp tục duy trì sự tập trung, chủ động vượt qua những bài tập khó và đạt được đúng những mục tiêu điểm số mà mình đã đề ra.</p>
+                <p>Chúc em có một ngày 20/10 thật nhiều niềm vui, luôn nỗ lực hết mình để ngày càng tiến bộ và gặt hái thêm nhiều kết quả rực rỡ hơn nữa nhé!</p>
             </div>
 
             <div class="letter-footer">
-                Happy Vietnamese Women's Day! ✨
+                Chúc em luôn học tốt & thành công! 🌟
             </div>
 
-            <!-- Mini Game: Rút quẻ may mắn -->
+            <!-- Mini Game -->
             <div class="interactive-section">
-                <div class="game-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Quẻ May Mắn Dành Cho Ngọc Minh</div>
+                <div class="game-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Quẻ May Mắn Động Lực Cho Ngọc Minh</div>
                 <button class="btn-draw" onclick="drawWish()">
-                    <i class="fa-solid fa-gift"></i> Rút Quẻ Ngẫu Nhiên
+                    <i class="fa-solid fa-gift"></i> Rút Quẻ Học Tập
                 </button>
                 <div class="wish-box" id="wishBox"></div>
             </div>
         </div>
 
         <footer>
-            Created with ❤️ for Nguyễn Ngọc Minh • 20/10 Special Edition
+            Gia sư đồng hành cùng Nguyễn Ngọc Minh • 20/10 Special
         </footer>
     </div>
 
-    <!-- Nút Âm Nhạc -->
-    <div class="audio-btn" id="audioBtn" onclick="toggleAudio()" title="Bật/Tắt Nhạc Giai Điệu">
+    <!-- Music Control Button -->
+    <div class="audio-btn" id="audioBtn" onclick="toggleAudio()" title="Bật/Tắt Nhạc Nền">
         <i class="fa-solid fa-music"></i>
     </div>
 
     <script>
-        /* ==========================================
-           1. Hiệu ứng Canvas: Cánh hoa & Trái tim rơi
-           ========================================== */
+        /* Canvas Floating Petals & Hearts */
         const canvas = document.getElementById('particleCanvas');
         const ctx = canvas.getContext('2d');
-
         let width = canvas.width = window.innerWidth;
         let height = canvas.height = window.innerHeight;
 
@@ -426,200 +416,101 @@
         });
 
         const particles = [];
-        const particleTypes = ['heart', 'petal', 'circle'];
-        const colors = ['#ffb6c1', '#ff6b8b', '#ffa07a', '#ffc0cb', '#e6a8d7'];
+        const colors = ['#ffb6c1', '#ff6b8b', '#ffa07a', '#ffc0cb'];
 
         class Particle {
-            constructor() {
-                this.reset();
-            }
-
+            constructor() { this.reset(); }
             reset() {
                 this.x = Math.random() * width;
                 this.y = -20;
-                this.size = Math.random() * 12 + 8;
-                this.speedY = Math.random() * 1.5 + 0.8;
-                this.speedX = Math.random() * 1.5 - 0.75;
-                this.type = particleTypes[Math.floor(Math.random() * particleTypes.length)];
+                this.size = Math.random() * 10 + 6;
+                this.speedY = Math.random() * 1.4 + 0.6;
+                this.speedX = Math.random() * 1.2 - 0.6;
                 this.color = colors[Math.floor(Math.random() * colors.length)];
                 this.opacity = Math.random() * 0.7 + 0.3;
                 this.rotation = Math.random() * 360;
-                this.rotSpeed = Math.random() * 2 - 1;
             }
-
             update() {
                 this.y += this.speedY;
-                this.x += Math.sin(this.y / 30) + this.speedX;
-                this.rotation += this.rotSpeed;
-
-                if (this.y > height + 20) {
-                    this.reset();
-                }
+                this.x += Math.sin(this.y / 25) + this.speedX;
+                if (this.y > height + 20) this.reset();
             }
-
             draw() {
                 ctx.save();
                 ctx.translate(this.x, this.y);
                 ctx.rotate((this.rotation * Math.PI) / 180);
                 ctx.globalAlpha = this.opacity;
                 ctx.fillStyle = this.color;
-
-                if (this.type === 'heart') {
-                    ctx.beginPath();
-                    const topCurveHeight = this.size * 0.3;
-                    ctx.moveTo(0, topCurveHeight);
-                    ctx.bezierCurveTo(0, 0, -this.size / 2, 0, -this.size / 2, topCurveHeight);
-                    ctx.bezierCurveTo(-this.size / 2, (this.size + topCurveHeight) / 2, 0, this.size, 0, this.size);
-                    ctx.bezierCurveTo(0, this.size, this.size / 2, (this.size + topCurveHeight) / 2, this.size / 2, topCurveHeight);
-                    ctx.bezierCurveTo(this.size / 2, 0, 0, 0, 0, topCurveHeight);
-                    ctx.closePath();
-                    ctx.fill();
-                } else if (this.type === 'petal') {
-                    ctx.beginPath();
-                    ctx.ellipse(0, 0, this.size / 2, this.size / 4, Math.PI / 4, 0, 2 * Math.PI);
-                    ctx.fill();
-                } else {
-                    ctx.beginPath();
-                    ctx.arc(0, 0, this.size / 3, 0, Math.PI * 2);
-                    ctx.fill();
-                }
-
+                ctx.beginPath();
+                ctx.ellipse(0, 0, this.size / 2, this.size / 4, Math.PI / 4, 0, 2 * Math.PI);
+                ctx.fill();
                 ctx.restore();
             }
         }
 
-        for (let i = 0; i < 45; i++) {
-            particles.push(new Particle());
-        }
+        for (let i = 0; i < 40; i++) particles.push(new Particle());
 
         function animateParticles() {
             ctx.clearRect(0, 0, width, height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
+            particles.forEach(p => { p.update(); p.draw(); });
             requestAnimationFrame(animateParticles);
         }
         animateParticles();
 
+        /* Audio Player logic */
+        const bgMusic = document.getElementById('bgMusic');
+        const audioBtn = document.getElementById('audioBtn');
+        let isPlaying = false;
 
-        /* ==========================================
-           2. Mở Thiệp & Hiệu ứng Pháo hoa Confetti
-           ========================================== */
-        function openCard() {
-            const envelope = document.getElementById('envelopeWrapper');
-            const cardModal = document.getElementById('cardModal');
-
-            envelope.style.display = 'none';
-            cardModal.style.display = 'block';
-
-            // Bắn pháo hoa Confetti ngọt ngào
-            if (typeof confetti === 'function') {
-                confetti({
-                    particleCount: 120,
-                    spread: 80,
-                    origin: { y: 0.6 },
-                    colors: ['#ff6b8b', '#ffb6c1', '#ffffff', '#ffd1dc']
-                });
-            }
-
-            // Tự động phát nhạc nền dịu nhẹ khi mở thư
+        function toggleAudio() {
             if (!isPlaying) {
-                toggleAudio();
+                bgMusic.play().then(() => {
+                    isPlaying = true;
+                    audioBtn.classList.add('playing');
+                }).catch(err => console.log("Audio play blocked", err));
+            } else {
+                bgMusic.pause();
+                isPlaying = false;
+                audioBtn.classList.remove('playing');
             }
         }
 
+        /* Open Card Function */
+        function openCard() {
+            document.getElementById('envelopeWrapper').style.display = 'none';
+            document.getElementById('cardModal').style.display = 'block';
 
-        /* ==========================================
-           3. Mini Game: Rút quẻ may mắn cho Ngọc Minh
-           ========================================== */
+            // Confetti
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                    colors: ['#ff6b8b', '#ffb6c1', '#ffffff']
+                });
+            }
+
+            // Tự động bật nhạc khi bấm mở thư
+            if (!isPlaying) toggleAudio();
+        }
+
+        /* Wishes Mini Game */
         const wishes = [
-            "🌸 Quẻ Đột Phá: Chúc Ngọc Minh kỳ thi tới 10 điểm tuyệt đối, chạm tay vào mọi mục tiêu!",
-            "✨ Quẻ Tỏa Sáng: Ngọc Minh luôn là phiên bản tự tin, xinh đẹp và rạng rỡ nhất nhé!",
-            "💖 Quẻ Hạnh Phúc: Mọi điều ngọt ngào nhất, niềm vui đong đầy nhất sẽ luôn vây quanh Ngọc Minh!",
-            "📚 Quẻ Thông Minh: Học đâu hiểu đó, làm đâu đúng đó, tiếp thu cực đỉnh!",
-            "🎉 Quẻ May Mắn: Nhận được thật nhiều quà và những lời chúc xinh xắn trong ngày 20/10!",
-            "🌷 Quẻ Bình An: Mong Ngọc Minh luôn giữ vững tinh thần lạc quan và nụ cười rạng rỡ mỗi ngày!"
+            "🎯 Quẻ Đột Phá: Chúc Ngọc Minh chinh phục bài thi tiếp theo với điểm 10 trọn vẹn!",
+            "📚 Quẻ Tư Duy: Chúc em luôn duy trì sự tập trung cao độ và tiếp thu kiến thức cực kỳ nhanh!",
+            "✨ Quẻ Tự Tin: Mong Minh luôn tự tin vào bản thân và vững vàng trước mọi bài toán khó!",
+            "🌟 Quẻ May Mắn: Chúc em gặp nhiều thuận lợi và có một ngày 20/10 thật nhiều niềm vui!",
+            "🌸 Quẻ Động Lực: Chăm chỉ hôm nay, gặt hái thành công lớn ngày mai nhé Ngọc Minh!"
         ];
 
         function drawWish() {
             const wishBox = document.getElementById('wishBox');
             const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
-            
             wishBox.style.display = 'block';
-            wishBox.innerHTML = `<i class="fa-solid fa-star"></i> ${randomWish}`;
+            wishBox.innerHTML = randomWish;
 
-            // Hiệu ứng pháo hoa nhẹ khi rút quẻ
             if (typeof confetti === 'function') {
-                confetti({
-                    particleCount: 40,
-                    angle: 60,
-                    spread: 55,
-                    origin: { x: 0 }
-                });
-                confetti({
-                    particleCount: 40,
-                    angle: 120,
-                    spread: 55,
-                    origin: { x: 1 }
-                });
-            }
-        }
-
-
-        /* ==========================================
-           4. Nhạc Nền Giai Điệu Du Dương (Web Audio API)
-           ========================================== */
-        let audioCtx = null;
-        let isPlaying = false;
-        let timer = null;
-
-        function playMelody() {
-            if (!audioCtx) {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            }
-
-            // Giai điệu Canon/Sweet Melody ngọt ngào nhẹ nhàng
-            const notes = [
-                261.63, 329.63, 392.00, 523.25, 
-                349.23, 440.00, 523.25, 659.25,
-                392.00, 493.88, 587.33, 698.46,
-                261.63, 329.63, 392.00, 523.25
-            ];
-            let noteIndex = 0;
-
-            timer = setInterval(() => {
-                if (!isPlaying) return;
-
-                const osc = audioCtx.createOscillator();
-                const gain = audioCtx.createGain();
-
-                osc.type = 'sine';
-                osc.frequency.setValueAtTime(notes[noteIndex], audioCtx.currentTime);
-
-                gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
-                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.2);
-
-                osc.connect(gain);
-                gain.connect(audioCtx.destination);
-
-                osc.start();
-                osc.stop(audioCtx.currentTime + 1.2);
-
-                noteIndex = (noteIndex + 1) % notes.length;
-            }, 600);
-        }
-
-        function toggleAudio() {
-            const btn = document.getElementById('audioBtn');
-            if (!isPlaying) {
-                isPlaying = true;
-                btn.classList.add('playing');
-                playMelody();
-            } else {
-                isPlaying = false;
-                btn.classList.remove('playing');
-                if (timer) clearInterval(timer);
+                confetti({ particleCount: 30, spread: 50, origin: { y: 0.8 } });
             }
         }
     </script>
