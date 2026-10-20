@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gửi Nguyễn Ngọc Minh - Chúc Mừng Ngày 20/10</title>
+    <title>Gửi Mẹ Yêu - Chúc Mừng Ngày 20/10</title>
     
     <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,12 +15,13 @@
 
     <style>
         :root {
-            --primary: #ff6b8b;
-            --primary-dark: #d81b60;
-            --accent: #ff8eaf;
-            --bg-start: #fff5f7;
-            --bg-end: #ffe3e8;
+            --primary: #e85a71;
+            --primary-dark: #c2185b;
+            --accent: #f78888;
+            --bg-start: #fff0f3;
+            --bg-end: #ffe4e8;
             --text-color: #4a3e43;
+            --gold: #d4af37;
         }
 
         * {
@@ -49,7 +50,7 @@
             z-index: 1;
         }
 
-        /* Layout Container */
+        /* App Container */
         .app-container {
             position: relative;
             z-index: 2;
@@ -71,34 +72,34 @@
 
         .badge-date {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             color: var(--primary-dark);
-            padding: 6px 18px;
+            padding: 6px 20px;
             border-radius: 50px;
             font-size: 0.95rem;
             font-weight: 700;
             letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(255, 107, 139, 0.2);
+            box-shadow: 0 4px 15px rgba(232, 90, 113, 0.2);
             backdrop-filter: blur(5px);
             margin-bottom: 12px;
-            border: 1px solid rgba(255, 182, 193, 0.5);
+            border: 1px solid rgba(255, 182, 193, 0.6);
         }
 
         h1.main-title {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.8rem;
+            font-size: 3rem;
             color: var(--primary-dark);
             line-height: 1.2;
             margin-bottom: 8px;
         }
 
         .sub-title {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: #7a616c;
             font-weight: 500;
         }
 
-        /* Envelope Area */
+        /* Envelope */
         .envelope-wrapper {
             position: relative;
             width: 100%;
@@ -110,9 +111,9 @@
         .envelope {
             width: 100%;
             background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 15px 35px rgba(216, 27, 96, 0.15);
-            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(194, 24, 91, 0.15);
+            padding: 40px 25px;
             text-align: center;
             position: relative;
             transition: transform 0.4s ease, box-shadow 0.3s;
@@ -121,21 +122,21 @@
 
         .envelope:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(216, 27, 96, 0.22);
+            box-shadow: 0 20px 40px rgba(194, 24, 91, 0.22);
         }
 
         .envelope-icon {
-            width: 75px;
-            height: 75px;
-            background: linear-gradient(135deg, #ff8eaf, #ff6b8b);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f78888, #e85a71);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
             color: white;
-            font-size: 2rem;
-            box-shadow: 0 8px 20px rgba(255, 107, 139, 0.35);
+            font-size: 2.2rem;
+            box-shadow: 0 8px 20px rgba(232, 90, 113, 0.35);
             animation: pulseHeart 1.8s infinite;
         }
 
@@ -146,7 +147,7 @@
         }
 
         .envelope-to {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #888;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -155,7 +156,7 @@
 
         .envelope-name {
             font-family: 'Great Vibes', cursive;
-            font-size: 2.7rem;
+            font-size: 3.2rem;
             color: var(--primary-dark);
             margin-bottom: 15px;
         }
@@ -166,9 +167,9 @@
             gap: 8px;
             background: #fff0f3;
             color: var(--primary-dark);
-            padding: 8px 18px;
+            padding: 8px 20px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 600;
         }
 
@@ -176,12 +177,12 @@
         .card-modal {
             display: none;
             width: 100%;
-            max-width: 650px;
-            background: rgba(255, 255, 255, 0.96);
+            max-width: 680px;
+            background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px 32px;
-            box-shadow: 0 20px 50px rgba(216, 27, 96, 0.18);
+            border-radius: 24px;
+            padding: 42px 35px;
+            box-shadow: 0 20px 50px rgba(194, 24, 91, 0.18);
             border: 2px solid #ffffff;
             animation: zoomIn 0.5s ease forwards;
         }
@@ -195,27 +196,27 @@
 
         .letter-header h2 {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.4rem;
+            font-size: 2.6rem;
             color: var(--primary-dark);
         }
 
         .letter-body {
-            font-size: 1.05rem;
-            line-height: 1.8;
+            font-size: 1.08rem;
+            line-height: 1.85;
             color: #3a2e33;
             text-align: justify;
             margin-bottom: 25px;
         }
 
         .letter-body p {
-            margin-bottom: 14px;
+            margin-bottom: 16px;
             text-indent: 24px;
         }
 
         .letter-footer {
             text-align: right;
             font-family: 'Dancing Script', cursive;
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             color: var(--primary-dark);
             font-weight: bold;
             margin-top: 20px;
@@ -223,29 +224,29 @@
 
         /* Mini Game Section */
         .interactive-section {
-            margin-top: 25px;
+            margin-top: 28px;
             border-top: 2px dashed #ffd1dc;
-            padding-top: 20px;
+            padding-top: 22px;
             text-align: center;
         }
 
         .game-title {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--primary-dark);
             margin-bottom: 14px;
         }
 
         .btn-draw {
-            background: linear-gradient(135deg, #ff6b8b, #d81b60);
+            background: linear-gradient(135deg, #e85a71, #c2185b);
             color: white;
             border: none;
-            padding: 12px 26px;
-            font-size: 0.98rem;
+            padding: 12px 28px;
+            font-size: 1rem;
             font-weight: 700;
             border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 6px 18px rgba(216, 27, 96, 0.28);
+            box-shadow: 0 6px 18px rgba(194, 24, 91, 0.28);
             transition: all 0.3s;
             display: inline-flex;
             align-items: center;
@@ -255,7 +256,7 @@
 
         .btn-draw:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 22px rgba(216, 27, 96, 0.38);
+            box-shadow: 0 8px 22px rgba(194, 24, 91, 0.38);
         }
 
         .wish-box {
@@ -263,16 +264,16 @@
             margin-top: 18px;
             background: #fff5f7;
             border: 2px solid #ffb6c1;
-            padding: 16px 20px;
-            border-radius: 14px;
-            color: #d81b60;
-            font-size: 1.05rem;
+            padding: 18px 20px;
+            border-radius: 16px;
+            color: #c2185b;
+            font-size: 1.08rem;
             font-weight: 600;
             line-height: 1.6;
             animation: fadeIn 0.4s ease;
         }
 
-        /* Audio Control Button */
+        /* Music Control Button */
         .audio-btn {
             position: fixed;
             bottom: 25px;
@@ -295,7 +296,7 @@
 
         .audio-btn.playing {
             animation: spin 5s linear infinite;
-            background: #ff6b8b;
+            background: #e85a71;
             color: white;
         }
 
@@ -306,7 +307,7 @@
         footer {
             margin-top: 30px;
             text-align: center;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             color: #888;
         }
 
@@ -326,11 +327,11 @@
         }
 
         @media (max-width: 600px) {
-            h1.main-title { font-size: 2.1rem; }
-            .envelope-name { font-size: 2.3rem; }
-            .card-modal { padding: 25px 18px; }
-            .letter-header h2 { font-size: 1.9rem; }
-            .letter-body { font-size: 0.98rem; text-align: left; }
+            h1.main-title { font-size: 2.2rem; }
+            .envelope-name { font-size: 2.6rem; }
+            .card-modal { padding: 25px 20px; }
+            .letter-header h2 { font-size: 2rem; }
+            .letter-body { font-size: 1rem; text-align: left; }
         }
     </style>
 </head>
@@ -339,62 +340,61 @@
     <!-- Particle Canvas -->
     <canvas id="particleCanvas"></canvas>
 
-    <!-- Audio Element (Nhạc Việt không lời / Acoustic dịu nhẹ) -->
+    <!-- Audio Element (Nhạc Piano / Lofi nhẹ nhàng êm dịu) -->
     <audio id="bgMusic" loop preload="auto">
-        <!-- Đã nhúng link stream bài hát acoustic nhẹ nhàng thích hợp cho học tập / chúc mừng -->
-        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3" type="audio/mpeg">
+        <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=piano-moment-10331.mp3" type="audio/mpeg">
     </audio>
 
     <div class="app-container">
         
         <header>
-            <div class="badge-date"><i class="fa-solid fa-calendar-heart"></i> 20 THÁNG 10</div>
-            <h1 class="main-title">Chúc Mừng Ngày Phụ Nữ Việt Nam</h1>
-            <p class="sub-title">Gửi tới học sinh Nguyễn Ngọc Minh</p>
+            <div class="badge-date"><i class="fa-solid fa-heart"></i> 20 THÁNG 10, 2026</div>
+            <h1 class="main-title">Món Quà Dành Tặng Mẹ Yêu</h1>
+            <p class="sub-title">Cảm ơn Mẹ vì tất cả những yêu thương và hy sinh thầm lặng</p>
         </header>
 
         <!-- Envelope -->
         <div class="envelope-wrapper" id="envelopeWrapper" onclick="openCard()">
             <div class="envelope">
                 <div class="envelope-icon">
-                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <i class="fa-solid fa-heart-pulse"></i>
                 </div>
-                <div class="envelope-to">Thư chúc mừng gửi tới:</div>
-                <div class="envelope-name">Nguyễn Ngọc Minh</div>
+                <div class="envelope-to">Thư yêu thương gửi tới:</div>
+                <div class="envelope-name">Mẹ Yêu Kính</div>
                 <div class="click-hint">
-                    <i class="fa-solid fa-hand-pointer"></i> Nhấp vào đây để mở thư nhé!
+                    <i class="fa-solid fa-hand-pointer"></i> Nhấp vào đây để mở thư Mẹ nhé!
                 </div>
             </div>
         </div>
 
-        <!-- Card Content (Gia sư gửi học sinh) -->
+        <!-- Card Content -->
         <div class="card-modal" id="cardModal">
             <div class="letter-header">
-                <h2>Gửi học sinh Nguyễn Ngọc Minh,</h2>
+                <h2>Gửi Mẹ Yêu Thương Của Con,</h2>
             </div>
 
             <div class="letter-body">
-                <p>Nhân ngày Phụ nữ Việt Nam 20/10, anh gửi lời chúc mừng chân thành nhất đến em cùng gia đình. Chúc Minh luôn có nhiều sức khỏe, giữ vững tinh thần vui tươi, sự tự tin và nét rạng rỡ trong cuộc sống.</p>
-                <p>Trong suốt quá trình đồng hành và học tập cùng nhau vừa qua, anh nhận thấy em là một học sinh chăm chỉ, có tư duy tốt và luôn có trách nhiệm cao với bài vở. Mong rằng trong thời gian tới, em sẽ tiếp tục duy trì sự tập trung, chủ động vượt qua những bài tập khó và đạt được đúng những mục tiêu điểm số mà mình đã đề ra.</p>
-                <p>Chúc em có một ngày 20/10 thật nhiều niềm vui, luôn nỗ lực hết mình để ngày càng tiến bộ và gặt hái thêm nhiều kết quả rực rỡ hơn nữa nhé!</p>
+                <p>Nhân ngày Phụ nữ Việt Nam 20/10, con muốn dành tặng Mẹ những lời chúc ấm áp và chân thành nhất từ tận đáy lòng.</p>
+                <p>Con cảm ơn Mẹ vì bao năm qua đã luôn tảo tần vất vả, bao dung và hy sinh tất cả để lo cho con có một cuộc sống đầy đủ, bình an. Dù đi đâu hay làm gì, sự yêu thương và nâng đỡ của Mẹ luôn là điểm tựa lớn nhất đối với con.</p>
+                <p>Con kính chúc Mẹ luôn dồi dào sức khỏe, lúc nào cũng giữ được nụ cười tươi vui, tinh thần thảnh thơi và sống thật hạnh phúc bên gia đình. Mong rằng Mẹ luôn bình an và mãi là vòng tay ấm áp nhất của con!</p>
             </div>
 
             <div class="letter-footer">
-                Chúc em luôn học tốt & thành công! 🌟
+                Con yêu Mẹ rất nhiều! ❤️
             </div>
 
-            <!-- Mini Game -->
+            <!-- Mini Game: Lời Chúc Cho Mẹ -->
             <div class="interactive-section">
-                <div class="game-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Quẻ May Mắn Động Lực Cho Ngọc Minh</div>
+                <div class="game-title"><i class="fa-solid fa-clover"></i> Quẻ Bình An & Sức Khỏe Cho Mẹ</div>
                 <button class="btn-draw" onclick="drawWish()">
-                    <i class="fa-solid fa-gift"></i> Rút Quẻ Học Tập
+                    <i class="fa-solid fa-gift"></i> Rút Quẻ May Mắn
                 </button>
                 <div class="wish-box" id="wishBox"></div>
             </div>
         </div>
 
         <footer>
-            Gia sư đồng hành cùng Nguyễn Ngọc Minh • 20/10 Special
+            Gửi trọn tình yêu tới Mẹ • 20/10 Special Edition
         </footer>
     </div>
 
@@ -416,7 +416,7 @@
         });
 
         const particles = [];
-        const colors = ['#ffb6c1', '#ff6b8b', '#ffa07a', '#ffc0cb'];
+        const colors = ['#f78888', '#e85a71', '#ffb6c1', '#ffd1dc'];
 
         class Particle {
             constructor() { this.reset(); }
@@ -424,7 +424,7 @@
                 this.x = Math.random() * width;
                 this.y = -20;
                 this.size = Math.random() * 10 + 6;
-                this.speedY = Math.random() * 1.4 + 0.6;
+                this.speedY = Math.random() * 1.3 + 0.6;
                 this.speedX = Math.random() * 1.2 - 0.6;
                 this.color = colors[Math.floor(Math.random() * colors.length)];
                 this.opacity = Math.random() * 0.7 + 0.3;
@@ -457,7 +457,7 @@
         }
         animateParticles();
 
-        /* Audio Player logic */
+        /* Audio Control */
         const bgMusic = document.getElementById('bgMusic');
         const audioBtn = document.getElementById('audioBtn');
         let isPlaying = false;
@@ -475,32 +475,29 @@
             }
         }
 
-        /* Open Card Function */
+        /* Open Card */
         function openCard() {
             document.getElementById('envelopeWrapper').style.display = 'none';
             document.getElementById('cardModal').style.display = 'block';
 
-            // Confetti
             if (typeof confetti === 'function') {
                 confetti({
                     particleCount: 100,
                     spread: 70,
                     origin: { y: 0.6 },
-                    colors: ['#ff6b8b', '#ffb6c1', '#ffffff']
+                    colors: ['#e85a71', '#ffb6c1', '#ffffff']
                 });
             }
 
-            // Tự động bật nhạc khi bấm mở thư
             if (!isPlaying) toggleAudio();
         }
 
         /* Wishes Mini Game */
         const wishes = [
-            "🎯 Quẻ Đột Phá: Chúc Ngọc Minh chinh phục bài thi tiếp theo với điểm 10 trọn vẹn!",
-            "📚 Quẻ Tư Duy: Chúc em luôn duy trì sự tập trung cao độ và tiếp thu kiến thức cực kỳ nhanh!",
-            "✨ Quẻ Tự Tin: Mong Minh luôn tự tin vào bản thân và vững vàng trước mọi bài toán khó!",
-            "🌟 Quẻ May Mắn: Chúc em gặp nhiều thuận lợi và có một ngày 20/10 thật nhiều niềm vui!",
-            "🌸 Quẻ Động Lực: Chăm chỉ hôm nay, gặt hái thành công lớn ngày mai nhé Ngọc Minh!"
+            "🌸 Quẻ Sức Khỏe: Chúc Mẹ luôn dồi dào sức khỏe, dẻo dai và sống vui vầy cùng con cháu!",
+            "💖 Quẻ Hạnh Phúc: Chúc Mẹ mỗi ngày đều tràn ngập niềm vui, tinh thần luôn thoải mái, an nhiên!",
+            "✨ Quẻ Bình An: Mong mọi điều may mắn, an lành nhất sẽ luôn đến với Mẹ!",
+            "🌷 Quẻ Yêu Thương: Chúc Mẹ có một ngày 20/10 trọn vẹn, nhận được thật nhiều tình yêu từ gia đình!"
         ];
 
         function drawWish() {
